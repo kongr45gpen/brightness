@@ -35,7 +35,7 @@ int main(int argc, char * argv[])
 
         if ((arg.back()) == '%') {
             brightness = (wanted * max_brightness)/100;
-        } else if (wanted < 1) {
+        } else if (wanted < 1 && wanted >= 0) {
             brightness = static_cast<int>(wanted * max_brightness);
         } else {
             brightness = static_cast<int>(wanted);
